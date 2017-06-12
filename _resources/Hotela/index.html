@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hotela - Hotel and Resort Mobile Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="HandheldFriendly" content="True">
+	
+	<link rel="shortcut icon" href="img/favicon.png">
+
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+	<!-- navbar -->
+	<div class="navbar">
+		<div class="container">
+			<div class="panel-control-left">
+				<a href="#" data-activates="slide-out-left" class="sidenav-control-left"><i class="fa fa-bars"></i></a>
+			</div>
+			<div class="site-title">
+				<a href="index.html" class="logo"><h1>HOTELA</h1></a>
+			</div>
+			<div class="panel-control-right">
+				<a href="#" data-activates="slide-out-right" class="sidenav-control-right"><i class="fa fa-shopping-bag"></i><span>2</span></a>
+			</div>
+		</div>
+	</div>
+	<!-- end navbar -->
+
+	<!-- panel control left -->
+	<div class="panel-control-left">
+		<ul id="slide-out-left" class="side-nav collapsible"  data-collapsible="accordion">
+			<li>
+				<a href="index.html"><i class="fa fa-home"></i>Home</a>
+			</li>
+			<li>
+				<div class="collapsible-header"><i class="fa fa-file-text-o"></i>Categories<span><i class="fa fa-chevron-right"></i></span></div>
+				<div class="collapsible-body">
+					<ul class="categories-in collapsible"  data-collapsible="accordion">
+						<li><a href="categories.html">Luxury Room</a></li>
+						<li><a href="categories.html">Beautiful Room</a></li>
+						<li><a href="categories.html">Suite Room</a></li>
+						<li><a href="categories.html">Family Room</a></li>
+						<li><a href="categories.html">Double Room</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="room.html"><i class="fa fa-th-large"></i>Room List</a>
+			</li>
+			<li>
+				<a href="details.html"><i class="fa fa-list"></i>Room Details</a>
+			</li>
+			<li>
+				<a href="shopping-cart.html"><i class="fa fa-shopping-cart"></i>Shopping Cart</a>
+			</li>
+			<li>
+				<a href="book-now.html"><i class="fa fa-send"></i>Book Now</a>
+			</li>
+			<li>
+				<a href="gallery.html"><i class="fa fa-image"></i>Gallery</a>
+			</li>
+			<li>
+				<div class="collapsible-header"><i class="fa fa-rss"></i>Blog <span><i class="fa fa-chevron-right"></i></span></div>
+				<div class="collapsible-body">
+					<ul class="side-nav-panel">
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="blog-single.html">Blog Single</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div class="collapsible-header"><i class="fa fa-file-powerpoint-o"></i>Pages <span><i class="fa fa-chevron-right"></i></span></div>
+				<div class="collapsible-body">
+					<ul class="side-nav-panel">
+						<li><a href="faq.html">Faq</a></li>
+						<li><a href="testimonial.html">Testimonial</a></li>
+						<li><a href="404.html">404 Page</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="contact.html"><i class="fa fa-envelope"></i>Contact Us</a>
+			</li>
+			<li>
+				<a href="login.html"><i class="fa fa-sign-in"></i>Login</a>
+			</li>
+			<li>
+				<a href="register.html"><i class="fa fa-user-plus"></i>Register</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end panel control left -->
+
+	<!-- panel control right -->
+	<div class="panel-control-right">
+		<div id="slide-out-right" class="side-nav">
+			<div class="row entry">
+				<div class="col s4">
+					<img src="img/cart1.jpg" alt="">
+				</div>
+				<div class="col s6">
+					<div class="desc">
+						<h6>Luxury Room</h6>
+						<div class="rating">
+							<span class="active"><i class="fa fa-star"></i></span>
+							<span class="active"><i class="fa fa-star"></i></span>
+							<span class="active"><i class="fa fa-star"></i></span>
+							<span class="active"><i class="fa fa-star"></i></span>
+							<span class=""><i class="fa fa-star"></i></span>
+						</div>
+						<h6><span>$150.00</span></h6>
+					</div>
+				</div>
+				<div class="col s2">
+					<div class="action">
+						<i class="fa fa-remove"></i>
+					</div>
+				</div>
+			</div>
+			<div class="row entry">
+				<div class="col s4">
+					<img src="img/cart2.jpg" alt="">
+				</div>
+				<div class="col s6">
+					<div class="desc">
+						<h6>Beautiful Room</h6>
+						<div class="rating">
+							<span class="active"><i class="fa fa-star"></i></span>
+							<span class="active"><i class="fa fa-star"></i></span>
+							<span class="active"><i class="fa fa-star"></i></span>
+							<span class=""><i class="fa fa-star"></i></span>
+							<span class=""><i class="fa fa-star"></i></span>
+						</div>
+						<h6><span>$150.00</span></h6>
+					</div>
+				</div>
+				<div class="col s2">
+					<div class="action">
+						<i class="fa fa-remove"></i>
+					</div>
+				</div>
+			</div>
+			<div class="row price">
+				<div class="col s8">
+					<h6>Total</h6>
+				</div>
+				<div class="col s4">
+					<h6>$300.00</h6>
+				</div>
+			</div>
+			<ul>
+				<li>
+					<button class="button">Book Now</button>
+				</li>
+				<li>
+					<button class="button">View Cart</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- end panel control right -->
+	
+	<!-- slider -->
+	<div class="slider-slick app-pages">
+		<div class="slider-entry">
+			
+			<img src="img/slider1.jpg" alt="">
+			<div class="overlay"></div>
+			<div class="caption">
+				<div class="container">
+					<h2>Hotel and Resort</h2>
+					<p>Places to stay good</p>
+					<button class="button">Read More</button>
+				</div>
+			</div>
+		</div>
+		<div class="slider-entry">
+			<div class="overlay"></div>
+			<img src="img/slider2.jpg" alt="">
+			<div class="caption">
+				<div class="container">
+					<h2>Beautiful Resort</h2>
+					<p>Places to stay good</p>
+					<button class="button">Read More</button>
+				</div>
+			</div>
+		</div>
+		<div class="slider-entry">
+			<div class="overlay"></div>
+			<img src="img/slider3.jpg" alt="">
+			<div class="caption">
+				<div class="container">
+					<h2>Luxury Room</h2>
+					<p>Places to stay good</p>
+					<button class="button">Read More</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end slider -->
+
+	<!-- form book -->
+	<div class="form-book">
+		<div class="container">
+			<div class="form-book-entry">
+				<input type="text" placeholder="Name">
+				<input type="email" placeholder="Email">
+				<input type="tel" placeholder="Phone">
+				<select>
+					<option value="" disabled selected="">Room Types</option>
+					<option value="1">Standard Room</option>
+					<option value="2">Double Room</option>
+					<option value="3">Family Room</option>
+					<option value="3">Suite Room</option>
+				</select>
+				<div class="row">
+					<div class="col s6">
+						<input type="text" placeholder="Arrival Date" class="datepicker">
+					</div>
+					<div class="col s6">
+						<input type="text" placeholder="Departure Date" class="datepicker">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s6">
+						<select>
+							<option value="" disabled selected="">Adult</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="3">4</option>
+						</select>
+					</div>
+					<div class="col s6">
+						<select>
+							<option value="" disabled selected="">Children</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="3">4</option>
+						</select>
+					</div>
+				</div>				
+				<button class="button">Book Now</button>
+			</div>
+		</div>
+	</div>
+	<!-- end form book -->
+
+	<!-- features -->
+	<div class="features app-bg-dark app-section">
+		<div class="container">
+			<div class="app-title">
+				<i class="fa fa-align-center"></i>
+				<div class="line"></div>
+				<h4>FEATURES</h4>	
+			</div>
+			<div class="row">
+				<div class="col s6">
+					<div class="entry">
+						<i class="fa fa-wifi"></i>
+						<h5>Free Wifi</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur</p>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="entry">
+						<i class="fa fa-television"></i>
+						<h5>Television</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur</p>
+					</div>
+				</div>
+			</div>
+			<div class="row row-last">
+				<div class="col s6">
+					<div class="entry">
+						<i class="fa fa-cutlery"></i>
+						<h5>Restaurant</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur</p>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="entry">
+						<i class="fa fa-bath"></i>
+						<h5>Swimming</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end features -->
+
+	<!-- best rooms -->
+	<div class="rooms app-section">
+		<div class="container">
+			<div class="app-title">
+				<i class="fa fa-align-center"></i>
+				<div class="line"></div>
+				<h4>BEST ROOMS</h4>	
+			</div>
+			<div class="row trash-mb">
+				<div class="col s6">
+					<div class="entry">
+						<img src="img/room6.jpg" alt="">
+						<div class="content">
+							<h5><a href="">Beautiful Rooms</a></h5>
+							<p>Lorem ipsum dolor sit amet . . .</p>
+							<h6><span>$190</span> / Night</h6>
+						</div>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="entry">
+						<img src="img/room3.jpg" alt="">
+						<div class="content">
+							<h5><a href="">Luxury Rooms</a></h5>
+							<p>Lorem ipsum dolor sit amet . . .</p>
+							<h6><span>$190</span> / Night</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end best rooms -->
+
+	<!-- room promote -->
+	<div class="room-promote app-section">
+		<div class="container">
+			<h4>BEAUTIFUL & LUXURY ROOM</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maxime quod eos</p>
+			<button class="button">Book Now</button>
+		</div>
+	</div>
+	<!-- end room promote -->
+
+	<!-- rooms -->
+	<div class="rooms app-section">
+		<div class="container">
+			<div class="app-title">
+				<i class="fa fa-align-center"></i>
+				<div class="line"></div>
+				<h4>ROOMS</h4>	
+			</div>
+			<div class="row">
+				<div class="col s6">
+					<div class="entry">
+						<img src="img/room1.jpg" alt="">
+						<div class="content">
+							<h5><a href="">Beautiful Rooms</a></h5>
+							<p>Lorem ipsum dolor sit amet . . .</p>
+							<h6><span>$190</span> / Night</h6>
+						</div>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="entry">
+						<img src="img/room2.jpg" alt="">
+						<div class="content">
+							<h5><a href="">Luxury Rooms</a></h5>
+							<p>Lorem ipsum dolor sit amet . . .</p>
+							<h6><span>$190</span> / Night</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s6">
+					<div class="entry">
+						<img src="img/room3.jpg" alt="">
+						<div class="content">
+							<h5><a href="">Beautiful Rooms</a></h5>
+							<p>Lorem ipsum dolor sit amet . . .</p>
+							<h6><span>$190</span> / Night</h6>
+						</div>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="entry">
+						<img src="img/room4.jpg" alt="">
+						<div class="content">
+							<h5><a href="">Luxury Rooms</a></h5>
+							<p>Lorem ipsum dolor sit amet . . .</p>
+							<h6><span>$190</span> / Night</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="button-room">
+				<button class="button">View More</button>
+			</div>
+		</div>
+	</div>
+	<!-- end rooms -->
+	
+	<!-- testimonial -->
+	<div class="testimonial app-section app-bg-dark">
+		<div class="container">
+			<div class="app-title">
+				<i class="fa fa-quote-left"></i>
+			</div>
+			<div id="testimonial" class="owl-carousel owl-theme">
+				<div class="item">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo inventore, numquam assumenda nihil totam sunt, ipsum nemo distinctio ipsa voluptates magni enim? Totam, distinctio iure similique consequuntur quae neque nesciunt.</p>
+					<img src="img/testimonial1.png" alt="">
+					<h6>Mario Doe</h6>
+					<strong>Web Developer</strong>
+				</div>
+				<div class="item">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo inventore, numquam assumenda nihil totam sunt, ipsum nemo distinctio ipsa voluptates magni enim? Totam, distinctio iure similique consequuntur quae neque nesciunt.</p>
+					<img src="img/testimonial2.png" alt="">
+					<h6>Mario Doe</h6>
+					<strong>Web Developer</strong>
+				</div>
+				<div class="item">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo inventore, numquam assumenda nihil totam sunt, ipsum nemo distinctio ipsa voluptates magni enim? Totam, distinctio iure similique consequuntur quae neque nesciunt.</p>
+					<img src="img/testimonial3.png" alt="">
+					<h6>Mario Doe</h6>
+					<strong>Web Developer</strong>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end testimonial -->
+	
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<h6>Find & follow us</h6>
+			<ul class="icon-social">
+				<li class="facebook"><a href=""><i class="fa fa-facebook"></i></a></li>
+				<li class="twitter"><a href=""><i class="fa fa-twitter"></i></a></li>
+				<li class="google"><a href=""><i class="fa fa-google"></i></a></li>
+				<li class="instagram"><a href=""><i class="fa fa-instagram"></i></a></li>
+				<li class="rss"><a href=""><i class="fa fa-rss"></i></a></li>
+			</ul>
+			<div class="tel-fax-mail">
+				<ul>
+					<li><span>Tel:</span> 900000002</li>
+					<li><span>Fax:</span> 0400000098</li>
+					<li><span>Email:</span> info@youremail.com</li>
+				</ul>
+			</div>
+			<div class="ft-bottom">
+				<span>Copyright © 2017 All Rights Reserved </span>
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+	
+	<!-- script -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/custom.js"></script>
+	
+</body>
+</html>
