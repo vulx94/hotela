@@ -3,28 +3,56 @@
  */
 
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, Router } from 'react-router-dom';
+import Navbar from '../Compontent/Navbar'
+import request from 'request'
+import Footer from '../Compontent/Footer'
 import './styles.css';
 
 
+
 class App extends Component {
+	constructor(props)
+	{
+		super(props);
+		console.log('contructor');
+		this.state ={
+			data: [],
+		}	
+	}
+
+
+	componentDidMount() {
+	console.log('componentDidMount');
+	request({
+		method: 'get',
+		url: 'http://35.162.241.129:3000/api/v1/room',
+	}, function (error, response, body) 
+		{
+			console.log('error:', error);
+			const data = JSON.parse(body);
+			console.log('data:', typeof data, data);
+			this.setState(
+				{
+				data: data
+				}
+				)
+		}.bind(this));
+  	}
+
+	componentWillUnmount()
+	{
+		console.log('conponentWillUnmount');
+	}
+	render(){
+		console.log('render');
+	}
+
+
   render() {
     return (
-    <div className="room">
-       <div className="navbar">
-		<div className="container">
-			<div className="panel-control-left">
-				<a href="#" data-activates="slide-out-left" className="sidenav-control-left"><i className="fa fa-bars"></i></a>
-			</div>
-			<div className="site-title">
-				<a href="index.html" className="logo"><h1>HOTELA</h1></a>
-			</div>
-			<div className="panel-control-right">
-				<a href="#" data-activates="slide-out-right" className="sidenav-control-right"><i className="fa fa-shopping-bag"></i><span>2</span></a>
-			</div>
-		</div>
-	</div>
+    <div className="rooms">
+       <Navbar title="Room"></Navbar>
 	{/*<!-- end navbar -->
 
 	<!-- panel control left -->*/}
@@ -162,8 +190,49 @@ class App extends Component {
 
 
 	<div className="rooms app-pages app-section">
+	<div className="container">
+            {(this.state.data.length === 0) ? (<span>Loading...</span>) : ( <div className="row">
+					{this.state.data.map(function(item, index) 
+						{
+							return (
+									<div className="col s6" key={index}>
+										<div className="entry">
+											<img src={"http://35.162.241.129:3000/uploads/" + item.coverImage.filename} alt="" />
+												<div className="content">
+													<h5><Link to={'/room/' + item._id}>{item.title}</Link></h5>
+													<p>Lorem ipsum dolor sit amet . . .</p>
+													<h6><span><Link to ='/Details'>{item.price}</Link></span> / Night</h6>
+												</div>
+										</div>
+									</div>
+									)
+
+						}				)
+					}
+										</div>
+            	)
+			}
+<div className="pagination">
+<ul>
+<li><a href="">First</a></li>
+<li className="active"><a href="">1</a></li>
+<li><a href="">2</a></li>
+<li><a href="">3</a></li>
+<li><a href="">4</a></li>
+<li><a href="">Last</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+	{/*<div className="rooms app-pages app-section">
 		<div className="container">
-			<div className="row">
+			{
+				(this.state.data.length ===0) ? (<span>Loading.....</span>) : (
+					<div className="row">
 				<div className="col s6">
 					<div className="entry">
 						<img src="img/room1.jpg" alt=""/>
@@ -229,6 +298,17 @@ class App extends Component {
 					</div>
 				</div>
 			</div>
+			
+				)
+
+
+			}
+
+
+
+
+
+
 			<div className="pagination">
 				<ul>
 					<li><a href="">First</a></li>
@@ -240,31 +320,9 @@ class App extends Component {
 				</ul>
 			</div>
 		</div>
-	</div>
+	</div>*/}
 	
-	
-	<footer>
-		<div className="container">
-			<h6>Find & follow us</h6>
-			<ul className="icon-social">
-				<li className="facebook"><a href=""><i className="fa fa-facebook"></i></a></li>
-				<li className="twitter"><a href=""><i className="fa fa-twitter"></i></a></li>
-				<li className="google"><a href=""><i className="fa fa-google"></i></a></li>
-				<li className="instagram"><a href=""><i className="fa fa-instagram"></i></a></li>
-				<li className="rss"><a href=""><i className="fa fa-rss"></i></a></li>
-			</ul>
-			<div className="tel-fax-mail">
-				<ul>
-					<li><span>Tel:</span> 900000002</li>
-					<li><span>Fax:</span> 0400000098</li>
-					<li><span>Email:</span> info@youremail.com</li>
-				</ul>
-			</div>
-			<div className="ft-bottom">
-				<span>Copyright © 2017 All Rights Reserved </span>
-			</div>
-		</div>
-	</footer> 
+	<Footer title=""></Footer>
     </div>  
       
     );
